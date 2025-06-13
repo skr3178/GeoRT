@@ -42,7 +42,7 @@ Note: For the Allegro Hand, you can actually skip this step. However, please fol
 We just need to complete a quick setup process outlined below:
 
 1. Place your robot hand URDF file in the ``assets`` folder. (We have included the Allegro example there.)
-2. Create a config file named ``your_robot_name.json`` in the ``geort/config directory``. Below is an example for the Allegro hand. For brevity, the details are omitted here, but you can refer to the [this](./geort/config/allegro_right.json) for full information. For setup instructions, please read [this](./geort/config/template.py) for setup instructions.
+2. Create a config file named ``your_robot_name.json`` in the ``geort/config`` directory. Below is an example for the Allegro hand. For brevity, the details are omitted here, but you can refer to the [this](./geort/config/allegro_right.json) for full information. For setup instructions, please read [this](./geort/config/template.py).
 
 ```
 {
