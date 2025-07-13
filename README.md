@@ -33,6 +33,7 @@ qpos = model.forward(mocap.get())
 ```
 But before this, we need to complete some one-time system setup steps outlined below.
 
+**Useful Links**: [Notes and Troubleshooting](#notes-and-troubleshooting)
 ## Getting Started
 We use the native Allegro Hand as an example. 
 
