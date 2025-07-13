@@ -46,7 +46,7 @@ We just need to complete a quick setup process outlined below:
 
 ```
 {
-    "name": "allegro_native",  
+    "name": "allegro_right",  
     "urdf_path": "./assets/allegro_right/allegro_hand_description_right.urdf",
     "base_link": "base_link",
     "joint_order": [
@@ -68,6 +68,15 @@ We just need to complete a quick setup process outlined below:
 }
 
 ```
+Now, you can run this command to visualize your hand.
+```
+python geort/env/hand.py --hand [YOUR_HAND_CONFIG_NAME]
+```
+such as 
+```
+python geort/env/hand.py --hand allegro_right
+```
+<span style="color:red"> If there is any segmentation error, please simplify the collision meshes or just remove all the `<collision>` fields in your URDF. </span> See the [Notes and Troubleshooting](#notes-and-troubleshooting) section.
 
 ### Step 2: Collect human hand mocap data.
 Now we need to collect some human hand data for training the retargeting model. We put an example human recording dataset in data folder. You can add your own data to that folder and here is a template python script to do this.
@@ -155,6 +164,11 @@ python ./geort/mocap/replay_evaluation.py -hand allegro_right -ckpt_tag YOUR_CKP
 ```
 ## Contributing
 Feel free to contribute your robot model and mocap system to the GeoRT repository!
+
+## [Notes and Troubleshooting](#notes-and-troubleshooting)
+1. **Note:Joint Range Clipping.** One core assumption of GeoRT is that the motion range of robot fingertips resembles that of human hands. To maintain realistic fingertip poses, please clip your robot's joint movement ranges appropriately and avoid unnatural configurations.
+
+2. **Simulation Errors with New Hands?** Simulation errors (segmentation fault) may occur when importing new robotic hands (e.g. [this issue](https://github.com/facebookresearch/GeoRT/issues/7)), and this is usually caused by collision meshes. To avoid this, ensure that the collision meshes defined in your URDF are simple—such as boxes or basic convex shapes. Alternatively, you can remove all <collision> elements from the URDF to eliminate these issues entirely. 
 
 ## Contact Us
 For any inquiries, please open an issue or contact the authors via email at ``zhaohengyin@cs.berkeley.edu``
