@@ -89,6 +89,7 @@ class HandKinematicModel:
 
         init_qpos = self.convert_user_order_to_sim_order((self.joint_lower_limit + self.joint_upper_limit) / 2)
         self.hand.set_qpos(init_qpos)
+        self.hand.set_qvel(0.0 * init_qpos)
         self.qpos_target = init_qpos
 
         for i, joint in enumerate(self.all_joints):
@@ -219,11 +220,14 @@ if __name__ == '__main__':
     viewer_env = model.get_viewer_env()
    
     # Control Loop
+    n_dof = model.get_n_dof()
+    dof_lower, dof_upper = model.get_joint_limit()
+
     steps = 0
     while True:
         viewer_env.update()
 
         steps += 1
         if steps % 30 == 0:
-            targets = np.random.uniform(0, 0.3, 16)
+            targets = np.random.uniform(0, 1, n_dof) * (dof_upper - dof_lower - 1e-7) + dof_lower + 1e-7
             model.set_qpos_target(targets)
