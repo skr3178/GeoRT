@@ -116,6 +116,8 @@ python ./geort/mocap/mediapipe_mocap.py --name human
 ```
 to generate a dataset named ``human``. Refered to the file for instructions. When you see the pop-up window, press ``s`` to start recording and ``q`` to finish. 
 
+**Note:** Please ensure that the hand frame orientation is consistent between your motion capture system and the hand URDF. In our provided mocap example, we support the **right** hand using the following convention:+Y axis: from the palm center to the thumb. +Z axis: from the palm center to the middle fingertip. +X axis: palm normal (pointing out of the palm). 
+
 ### Step 3: Train the Model
 Assuming you have placed ``your_robot_name.json`` in the ``geort/config`` folder as described in Step 1, and set ``data_output_name`` to ``human`` in Step 2, run the following command. TAG is the checkpoint id to use in later deployment.
 
