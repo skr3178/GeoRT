@@ -175,6 +175,14 @@ Feel free to contribute your robot model and mocap system to the GeoRT repositor
 
 3. **Hand Coordinate System (Frame) Convention** Please ensure that the hand frame orientation is consistent between your motion capture system and the hand URDF (but fortunately the origin does not require any alignment and you can just set it to palm center). In our provided mocap example, we support the **right** hand using the following convention:+Y axis: from the palm center to the thumb. +Z axis: from the palm center to the middle fingertip. +X axis: palm normal (pointing out of the palm). 
 
+### SKR
+
+- Simulate new hands from Unitree Dex5_1_right. 
+- Downloaded files from Unitree repo
+- Created a new .json file for training purposes
+
+- Conda env used amp_env
+```conda activate amp_env```
 
 ## Contact Us
 For any inquiries, please open an issue or contact the authors via email at ``zhaohengyin@cs.berkeley.edu``

@@ -1,0 +1,156 @@
+{
+    "README!!": "Please see config/template.py for instructions. You can remove this in your config json",
+    "name": "dex5_1_left",
+    "urdf_path": "./assets/dex5_1_left/Dex5_URDF_L.urdf",
+    "base_link": "base_link_L",
+    "joint_order": [
+        "Yaw_11L",
+        "Roll_12L",
+        "Pitch_13L",
+        "Pitch_14L",
+        "Roll_21L",
+        "Pitch_22L",
+        "Pitch_23L",
+        "Pitch_24L",
+        "Roll_31L",
+        "Pitch_32L",
+        "Pitch_33L",
+        "Pitch_34L",
+        "Link_41L",
+        "Pitch_42L",
+        "Pitch_43L",
+        "Pitch_44L",
+        "Roll_51L",
+        "Pitch_52L",
+        "Pitch_53L",
+        "Pitch_54L"
+    ],
+    "fingertip_link": [
+        {
+            "name": "thumb",
+            "link": "Link_14L",
+            "joint": [
+                "Yaw_11L",
+                "Roll_12L",
+                "Pitch_13L",
+                "Pitch_14L"
+            ],
+            "center_offset": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "human_hand_id": 4
+        },
+        {
+            "name": "index",
+            "link": "Link_24L",
+            "joint": [
+                "Roll_21L",
+                "Pitch_22L",
+                "Pitch_23L",
+                "Pitch_24L"
+            ],
+            "center_offset": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "human_hand_id": 8
+        },
+        {
+            "name": "middle",
+            "link": "Link_34L",
+            "joint": [
+                "Roll_31L",
+                "Pitch_32L",
+                "Pitch_33L",
+                "Pitch_34L"
+            ],
+            "center_offset": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "human_hand_id": 12
+        },
+        {
+            "name": "ring",
+            "link": "Link_44L",
+            "joint": [
+                "Link_41L",
+                "Pitch_42L",
+                "Pitch_43L",
+                "Pitch_44L"
+            ],
+            "center_offset": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "human_hand_id": 16
+        },
+        {
+            "name": "pinky",
+            "link": "Link_54L",
+            "joint": [
+                "Roll_51L",
+                "Pitch_52L",
+                "Pitch_53L",
+                "Pitch_54L"
+            ],
+            "center_offset": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "human_hand_id": 20
+        }
+    ],
+    "joint": {
+        "lower": [
+            -0.5759599804878235,
+            -1.8150999546051025,
+            0.0,
+            0.0,
+            -0.3839699923992157,
+            0.0,
+            0.0,
+            0.0,
+            -0.3839699923992157,
+            0.0,
+            0.0,
+            0.0,
+            -0.3839699923992157,
+            0.0,
+            0.0,
+            0.0,
+            -0.3839699923992157,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "upper": [
+            0.7679399847984314,
+            0.0,
+            1.954800009727478,
+            1.6405999660491943,
+            0.3839699923992157,
+            1.5707999467849731,
+            1.6842427253723145,
+            1.396299958229065,
+            0.3839699923992157,
+            1.5707999467849731,
+            1.6842427253723145,
+            1.396299958229065,
+            0.3839699923992157,
+            1.5707999467849731,
+            1.6842427253723145,
+            1.396299958229065,
+            0.3839699923992157,
+            1.5707999467849731,
+            1.6842427253723145,
+            1.396299958229065
+        ]
+    }
+}
